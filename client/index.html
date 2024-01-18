@@ -6,7 +6,7 @@
     <h1>hello</h1>
     <p>增加预览文案</p>
     <button id="add-item">点击增加 item</button>
-    <ul>
+    <ul id="panel">
       <li>固定的 item</li>
     </ul>
   </body>
@@ -19,11 +19,11 @@
   <script>
     document.querySelector('#add-item').addEventListener('click', function () {
       // 获取当前 ul 中已有的 item 数量
-      var count = document.querySelectorAll('#add-item li').length;
+      var count = document.querySelectorAll('#panel li').length;
 
       var li = document.createElement('li');
       li.innerText = `动态增加的 item-${count}`;
-      document.querySelector('#add-item').appendChild(li);
+      document.querySelector('#panel').appendChild(li);
     });
   </script>
 </html>
